@@ -1,17 +1,18 @@
-const CACHE_NAME = 'senaman-otot-cache-v2';
+const CACHE_NAME = 'senaman-otot-cache-v3'; // Naikkan versi cache lagi untuk memastikan update berlaku
 const urlsToCache = [
-  './index.html',
-  './manifest.json',
-  './iconMuscle.png'
+  './index.html',
+  './manifest.json',
+  './iconMusle-192.png', // ✅ BETUL
+  './iconMucle-512.png'  // ✅ BETUL
 ];
 
 // Install SW
 self.addEventListener('install', e=>{
-    e.waitUntil(
-        caches.open(CACHE_NAME).then(cache=>{
-            return cache.addAll(urlsToCache);
-        })
-    );
+    e.waitUntil(
+        caches.open(CACHE_NAME).then(cache=>{
+            return cache.addAll(urlsToCache);
+        })
+    );
 });
 
 // Activate SW
@@ -27,4 +28,5 @@ self.addEventListener('fetch', e=>{
         })
     );
 });
+
 
