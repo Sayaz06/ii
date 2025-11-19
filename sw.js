@@ -1,8 +1,8 @@
-const CACHE_NAME = 'senaman-otot-cache-v1';
+const CACHE_NAME = 'senaman-otot-cache-v2';
 const urlsToCache = [
   './index.html',
   './manifest.json',
-  './icon.png'
+  './iconMuscle.png'
 ];
 
 // Install SW
@@ -27,3 +27,4 @@ self.addEventListener('fetch', e=>{
         })
     );
 });
+
